@@ -48,9 +48,12 @@ h1 {
 }
 
 .start-button:hover {
-  color: greenyellow;
+  /*color: greenyellow;*/
+  background-color: green;
+  color: white;
   font-size: 18px;
-  border-color: greenyellow;
+  /*border-color: greenyellow;*/;
+  border-color: white;
   transform: rotate(5deg);
 }
 
