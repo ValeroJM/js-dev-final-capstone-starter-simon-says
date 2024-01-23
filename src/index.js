@@ -39,13 +39,13 @@ let roundCount = 0; // track the number of rounds that have been played so far
   },
   // TODO: Add the objects for the green, blue, and yellow pads. Use object for the red pad above as an example.
   {
-    color: "blue",
-    selector: document.querySelector(".js-pad-blue"),
+    color: "green",
+    selector: document.querySelector(".js-pad-green"),
     sound: new Audio("../assets/simon-says-sound-2.mp3"),
   },
   {
-    color: "green",
-    selector: document.querySelector(".js-pad-green"),
+    color: "blue",
+    selector: document.querySelector(".js-pad-blue"),
     sound: new Audio("../assets/simon-says-sound-3.mp3"),
   },
   {
@@ -61,6 +61,7 @@ let roundCount = 0; // track the number of rounds that have been played so far
 
 padContainer.addEventListener("click", padHandler);
 // TODO: Add an event listener `startButtonHandler()` to startButton.
+startButton.addEventListener("click", startButtonHandler);
 
 /**
  * EVENT HANDLERS
@@ -82,7 +83,11 @@ padContainer.addEventListener("click", padHandler);
  */
 function startButtonHandler() {
   // TODO: Write your code here.
-
+  setLevel();
+  roundCount++;
+  startButton.classList.add('hidden');
+  statusSpan.classList.remove('hidden');
+  playComputerTurn();
   return { startButton, statusSpan };
 }
 
@@ -138,6 +143,17 @@ function padHandler(event) {
  */
 function setLevel(level = 1) {
   // TODO: Write your code here.
+  let levelResult = "Please enter level 1, 2, 3, or 4";
+  if (level === 4){
+    levelResult = 31;
+  } else if (level === 3){
+    levelResult = 20;
+  } else if (level === 2){
+    levelResult = 14;
+  } else if (level === 1 || null){
+    levelResult = 8;
+  }
+  return levelResult;
 }
 
 /**
@@ -159,6 +175,9 @@ function getRandomItem(collection) {
   // if (collection.length === 0) return null;
   // const randomIndex = Math.floor(Math.random() * collection.length);
   // return collection[randomIndex];
+  if (collection.length === 0) return null;
+  const randomIndex = Math.floor(Math.random() * collection.length);
+  return collection[randomIndex];
 }
 
 /**
