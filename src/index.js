@@ -35,23 +35,23 @@ let roundCount = 0; // track the number of rounds that have been played so far
   {
     color: "red",
     selector: document.querySelector(".js-pad-red"),
-    sound: new Audio("../assets/simon-says-sound-1.mp3"),
+    sound: new Audio("https://github.com/kchia/simon-says-sounds/blob/main/simon-says-sound-1.mp3?raw=true"),
   },
   // TODO: Add the objects for the green, blue, and yellow pads. Use object for the red pad above as an example.
   {
     color: "green",
     selector: document.querySelector(".js-pad-green"),
-    sound: new Audio("../assets/simon-says-sound-2.mp3"),
+    sound: new Audio("https://github.com/kchia/simon-says-sounds/blob/main/simon-says-sound-2.mp3?raw=true"),
   },
   {
     color: "blue",
     selector: document.querySelector(".js-pad-blue"),
-    sound: new Audio("../assets/simon-says-sound-3.mp3"),
+    sound: new Audio("https://github.com/kchia/simon-says-sounds/blob/main/simon-says-sound-3.mp3?raw=true"),
   },
   {
     color: "yellow",
     selector: document.querySelector(".js-pad-yellow"),
-    sound: new Audio("../assets/simon-says-sound-4.mp3"),
+    sound: new Audio("https://github.com/kchia/simon-says-sounds/blob/main/simon-says-sound-4.mp3?raw=true"),
   }
 ];
 
@@ -314,7 +314,8 @@ function checkPress(color) {
   setText(statusSpan, remainingPresses + " presses left");
 
   if (playerSequence[index] !== computerSequence[index]){
-    resetGame("GAME OVER");
+    resetGame("GAME OVER")
+    return;
   }
 
   if (remainingPresses === 0){
@@ -340,7 +341,8 @@ function checkPress(color) {
 function checkRound() {
   // TODO: Write your code here.
   if(playerSequence.length === maxRoundCount) {
-    resetGame("You won!");
+    resetGame("You won!",true);
+    return;
   } else {
     roundCount++;
     playerSequence = [];
