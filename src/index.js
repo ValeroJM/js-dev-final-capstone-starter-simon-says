@@ -372,7 +372,7 @@ function resetGame(text) {
   // startButton.classList.remove("hidden");
   // statusSpan.classList.add("hidden");
   alert(text); //It resets alert window
-  setText(heading, "Simon Says"); //It resets heading
+  setText(heading, "Simon Says!"); //It resets heading
   startButton.classList.remove("hidden"); //It unhides start button
   statusSpan.classList.add("hidden"); //It hides status text prior to game start
   padContainer.classList.add("unclickable"); //It makes padContainer unclickable

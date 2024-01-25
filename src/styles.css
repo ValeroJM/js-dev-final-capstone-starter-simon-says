@@ -22,6 +22,8 @@ body {
 main {
   background-color: #000;
   padding: 40px;
+  border-radius: 25px;
+  border: solid 3px white;
 }
 
 h1 {
@@ -72,69 +74,81 @@ h1 {
 .pad-red {
   border-top-left-radius: 200px;
   background-color: red;
+  border: solid 3px white;
 }
 
 .pad-red:hover,
 .pad-red:focus {
   background-color: #ff451a;
   transform: rotate(-5deg);
+  border: solid 3px white;
 }
 
 .pad-red:active,
 .pad-red.activated {
   background-color: #ff5c36;
   transform: translateY(10px);
+  border: solid 3px white;
 }
 
 .pad-green {
   border-top-right-radius: 200px;
   background-color: green;
+  border: solid 3px white;
 }
 
 .pad-green:hover,
 .pad-green:focus {
   background-color: #8cc218;
   transform: rotate(5deg);
+  border: solid 3px white;
 }
 
 .pad-green:active,
 .pad-green.activated {
   background-color: #a0ea00;
   transform: translateY(10px);
+  border: solid 3px white;
 }
 
 .pad-yellow {
   border-bottom-right-radius: 200px;
   background-color: yellow;
+  border: solid 3px white;
 }
 
 .pad-yellow:hover,
 .pad-yellow:focus {
   background-color: #ffb900;
   transform: rotate(5deg);
+  border: solid 3px white;
 }
 
 .pad-yellow:active,
 .pad-yellow.activated {
   background-color: #ffca3d;
   transform: translateY(10px);
+  border: solid 3px white;
 }
 
 .pad-blue {
   border-bottom-left-radius: 200px;
   background-color: blue;
+  border: solid 3px white;
 }
 
 .pad-blue:hover,
 .pad-blue:focus {
   background-color: #139ddd;
   transform: rotate(5deg);
+  border: solid 3px white;
 }
 
 .pad-blue:active,
 .pad-blue.activated {
   background-color: #2bbcff;
   transform: translateY(10px);
+  border: solid 3px white;
 }
 
 .hidden {
